@@ -137,33 +137,10 @@ public:
 
 int main(){
 
-    int n,m;
-    std::cin>>n>>m;
-    SqrtSearch sq(n);
-    for(int i = 0; i < m; ++i){
-        int tmp;
-        std::cin>>tmp;
-        if(tmp==1){
-            unsigned int a,b;
-            std::cin>>a>>b;
-            sq.insert(a,b);
-//            sq.print_data();
-        }else if(tmp == 2){
-            unsigned int a,b;
-            std::cin>>a>>b;
-            sq.remove(a,b);
-//            sq.print_data();
-        }else{
-            unsigned int a,b,c,d;
-            std::cin>>a>>b>>c>>d;
-            if(sq.check_range(a,c,b,d)){
-                std::cout<<"Yes"<<std::endl;
-            }else{
-                std::cout<<"No"<<std::endl;
-            }
-
-        }
-    }
+    SqrtSearch sq(10);
+    sq.insert(1,1);
+    sq.remove(1,1);
+    sq.check_range(1,10,1,10);
 
 
 }
